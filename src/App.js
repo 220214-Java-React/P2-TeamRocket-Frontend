@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react"
+import { useState } from "react";
+import Left from "./Left"
+import Right from "./Right"
+
 
 function App() {
+	
+	let temp = localStorage.getItem("pokedex_user");
+	
+	if(temp != null){
+		window.myuser = JSON.parse(temp);
+	}else{
+		window.myuser = null;
+	}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+		<div id="app" >
+			<Left />
+			<Right />
+		</div>
   );
 }
 

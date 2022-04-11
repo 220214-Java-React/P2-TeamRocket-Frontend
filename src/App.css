@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+#app{
+	background: url("pokedex.png") no-repeat center center fixed;
+	background-size: auto 100%;
+	margin: auto;
+	height: 100%;
+	display: flex;
+	aspect-ratio: 8/6;
+	border: 2px solid black;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#left-box{
+	position: relative;
+	top: 25.3%;
+	left: 3.6%;
+	height: 56.5%;
+	width: 41.45%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#left-box:hover{
+	outline: 5px solid lime;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#right-box{
+	position: relative;
+	top: 26%;
+	left: 16.5%;
+	height: 62.75%;
+	width: 37.7%;
 }
 
-.App-link {
-  color: #61dafb;
+#right-box:hover{
+	outline: 5px solid lime;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#navbar{
+	display: flex;
+	height: 10%;
+	justify-content: space-evenly;
+	font-size: 1.5em;
+	font-weight: 700;
+	margin: 5px;
+	
+}
+
+#login-button{
+	text-align: center;
+	vertical-align: middle;
+	line-height: center;
+	padding: 1% 2% 0 2%;
+}
+
+#login-button:hover{
+	outline: 2px solid black;
+	cursor: pointer;
 }

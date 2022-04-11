@@ -1,0 +1,17 @@
+	X	Y	% of img X	% of img Y
+
+pokedex image:
+
+dim:	800	600
+
+left box:
+
+pos:	30	155	0.036		0.253
+
+dim:	330	336	0.4145		0.565
+
+right box:
+
+pos:	465	160	16.5(0.58125)	0.26
+
+dim:	300	375	0.377		0.6275
