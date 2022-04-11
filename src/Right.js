@@ -1,17 +1,25 @@
 import React from "react"
-import { useState } from "react";
-import Login from "./Login"
+import ReactDOM from "react-dom";
+import { useState, createContext, useContext } from "react";
+import LoginButton from "./LoginButton"
+import LoginForm from "./LoginForm"
+import {LoginContext} from "./App"
+
 
 function Right(){
 	
-	const [loggedin, setLoggedin] = useState(false);
+	const [active, setActive] = useContext(LoginContext);
 	
-	return <div id="right-box">
+
+	return (<div id="right-box">
 				<div id="navbar">
-					<Login />
+					<LoginButton />
 				</div>
-			</div>;
+				{active ? "" : <LoginForm />}
+			</div>
+	);
 }
 
 
 export default Right;
+
