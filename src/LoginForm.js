@@ -13,10 +13,31 @@ function LoginForm(){
 		let myUsername = document.getElementById("login-form-username");
 		let myPassword = document.getElementById("login-form-password");
 		
-		window.myuser = {
-			username: myUsername.value
+		if(myUsername.value && myPassword.value){
+			window.myuser = {
+				username: myUsername.value
+			}
+			
+			let trash = {
+				usr: myUsername.value,
+				pwd: myPassword.value
+			}
+			fetch("http://localhost:8080/myuser",{
+				header: "asdf",
+				headers:{
+					"content-type": "application/json",
+				},
+				method: "post",
+				body: JSON.stringify(trash)
+			})
+			.then((response) => response.json())
+			.then((data) => {console.log("asdf");});
+			setActive(true);
+			
+		}else{
+			alert("You must enter a username and password to log in.");
 		}
-		setActive(true);
+		
 	}
 	
 	function valInput(e){

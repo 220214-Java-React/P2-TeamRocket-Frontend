@@ -9,27 +9,30 @@ export const LoginContext = createContext();
 
 function App() {
 	
-	const [active, setActive] = useState(false);
+	const [active, setActive] = useState(0);
 	
 	let temp = localStorage.getItem("myuser");
-	// if(temp != null){
-		// window.myuser = JSON.parse(temp);
-		// setActive(true);
-	// }else{
-		// window.myuser = null;
-		// setActive(false);
-	// }
+	if(temp != null){
+		window.myuser = JSON.parse(temp);
+	}else{
+		window.myuser = null;
+		//setActive(0); causes an infinite re-render loop which react terminates *shrug*
+	}
 
-  return (
-		
-		<div id="app" >
-			<Left />
-			<LoginContext.Provider value={[active, setActive]}>
-			<Right  />
-			</LoginContext.Provider>
-		</div>
-		
-  );
+	switch(active){
+		case 0:
+			return (
+				<div id="app" >
+					<LoginContext.Provider value={[active, setActive]}>
+					<Left />
+					<Right  />
+					</LoginContext.Provider>
+				</div>
+				
+			);
+			break;
+	}
+	
 }
 
 export default App;
