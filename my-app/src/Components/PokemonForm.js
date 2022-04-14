@@ -48,21 +48,3 @@ function PokemonForm() {
         );
 }
 export default PokemonForm;
-
-// const [newPokemon, setNewPokemon] = useState({
-    //     id:'',
-    //     name:'',
-    //     imagefront: ''
-
-        
-    // });
-    // const mutationCreatePokemon = CreatePokemon;
-    // const handleSubmit = e =>{
-    //     mutationCreatePokemon.mutate(newPokemon);
-
-    //     setNewPokemon({
-    //         id: '',
-    //         name:'',
-    //         imagefront:'',
-    //     });
-    // };
