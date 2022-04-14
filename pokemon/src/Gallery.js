@@ -3,8 +3,12 @@ import Imgix from "react-imgix";
 
 const images = [
   "ash",
+  "brock",
   "misty",
-  "brock"
+  "surge",
+  "erika",
+  "koga",
+  "sabrina"
 ];
 
 const buildURL = imagePath =>
