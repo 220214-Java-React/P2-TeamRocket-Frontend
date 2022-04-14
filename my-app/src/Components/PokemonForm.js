@@ -1,6 +1,6 @@
 import {SaveIcon} from '@heroicons/react/outline'
 import React from 'react';
-const BASE_API_URL = "http://localhost:8080";
+const BASE_API_URL = "http://192.168.1.126:8080";//Change this to localhost:
 const RESOURCE_URL = `${BASE_API_URL}/pokemon`;
 
 function PokemonForm() {
@@ -12,14 +12,13 @@ function PokemonForm() {
             pokemonid:pokemonid.value
         }
         let response = fetch(RESOURCE_URL, {
-            header: "pokemonid",
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(pokemon),
             }).then(response => response.json);
-            console.log(response.pokemonid);
+            console.log(response);
         
     }
         

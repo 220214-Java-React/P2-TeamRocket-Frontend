@@ -17,21 +17,22 @@
 	width: 41.45%;
 }
 
-#left-box:hover{
+/* #left-box:hover{
 	outline: 5px solid lime;
-}
+} */
 
 #right-box{
 	position: relative;
 	top: 26%;
-	left: 16.5%;
+	left: 17.5%;
 	height: 62.75%;
 	width: 37.7%;
+	overflow: scroll;
 }
 
-#right-box:hover{
-	outline: 5px solid lime;
-}
+ /* #right-box:hover{
+	 outline: 5px solid lime;
+}  */
 
 #navbar{
 	display: flex;
@@ -61,3 +62,4 @@
 	width: 100%;
 	padding: 10px;
 }
+

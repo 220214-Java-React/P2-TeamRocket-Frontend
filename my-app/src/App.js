@@ -1,12 +1,15 @@
 
 import './App.css';
+import './Components/PokemonInformation.css'
 import './Components/PokemonForm.css'
 import React from "react"
 import ReactDOM from "react-dom";
 import { createContext, useState, useContext } from "react";
 import Left from "./Hooks/Left"
 import Right from "./Hooks/Right"
-import PokemonForm from './Components/PokemonForm';
+import PokemonTeam from './Components/PokemonTeam';
+
+import  PokemonInformation  from "./Components/PokemonInformation"
 
 export const LoginContext = createContext();
 
@@ -14,7 +17,7 @@ function App() {
 	
 	const [active, setActive] = useState(false);
 	
-	let temp = localStorage.getItem("myuser");
+	// let temp = localStorage.getItem("myuser");
 	// if(temp != null){
 		// window.myuser = JSON.parse(temp);
 		// setActive(true);
@@ -26,9 +29,9 @@ function App() {
   return (
 		
 		<div id="app" >
-			<PokemonForm />
 			<LoginContext.Provider value={[active, setActive]}>
-			<Right  />
+			<PokemonTeam />
+			<PokemonInformation />
 			</LoginContext.Provider>
 		</div>
 		
