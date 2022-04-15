@@ -1,15 +1,17 @@
 
 import './App.css';
 import './Components/PokemonInformation.css'
-import './Components/PokemonForm.css'
+import './Components/PokemonMore.css'
+import './Components/PokemonTeam.css'
 import React from "react"
 import ReactDOM from "react-dom";
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext } from "react"
 import Left from "./Hooks/Left"
 import Right from "./Hooks/Right"
-import PokemonTeam from './Components/PokemonTeam';
+import PokemonTeam from './Components/PokemonTeam'
 
 import  PokemonInformation  from "./Components/PokemonInformation"
+import PokemonMore from './Components/PokemonMore';
 
 export const LoginContext = createContext();
 
@@ -30,7 +32,7 @@ function App() {
 		
 		<div id="app" >
 			<LoginContext.Provider value={[active, setActive]}>
-			<PokemonTeam />
+			<PokemonMore />
 			<PokemonInformation />
 			</LoginContext.Provider>
 		</div>

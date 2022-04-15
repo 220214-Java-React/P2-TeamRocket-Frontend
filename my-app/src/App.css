@@ -12,9 +12,10 @@
 #left-box{
 	position: relative;
 	top: 25.3%;
-	left: 3.6%;
+	left: 2.6%;
 	height: 56.5%;
 	width: 41.45%;
+	overflow: scroll;
 }
 
 /* #left-box:hover{
@@ -63,3 +64,6 @@
 	padding: 10px;
 }
 
+body{
+	overflow: hidden;
+}
