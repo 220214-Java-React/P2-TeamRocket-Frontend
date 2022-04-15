@@ -1,9 +1,10 @@
 import './App.css';
+import "./login-component.css";
 import React from "react"
 import ReactDOM from "react-dom";
 import { createContext, useState, useContext } from "react";
-import Left from "./Left"
-import Right from "./Right"
+import LoginLeft from "./LoginLeft"
+import LoginRight from "./LoginRight"
 
 export const LoginContext = createContext();
 
@@ -16,16 +17,18 @@ function App() {
 		window.myuser = JSON.parse(temp);
 	}else{
 		window.myuser = null;
-		//setActive(0); causes an infinite re-render loop which react terminates *shrug*
+		if(active != 0){
+			setActive(0);
+		}
 	}
 
 	switch(active){
 		case 0:
 			return (
-				<div id="app" >
+				<div id="login-component" >
 					<LoginContext.Provider value={[active, setActive]}>
-					<Left />
-					<Right  />
+						<LoginLeft />
+						<LoginRight  />
 					</LoginContext.Provider>
 				</div>
 				
