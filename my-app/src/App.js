@@ -32,7 +32,7 @@ function App() {
 		
 		<div id="app" >
 			<LoginContext.Provider value={[active, setActive]}>
-			<PokemonMore />
+			
 			<PokemonInformation />
 			</LoginContext.Provider>
 		</div>
