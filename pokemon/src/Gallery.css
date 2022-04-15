@@ -26,4 +26,13 @@ body {
     overflow: hidden;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   }
+
+  h4 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .gBox:hover {
+    color: tomato;
+  }
   
