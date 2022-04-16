@@ -5,7 +5,7 @@ import './Components/PokemonMore.css'
 import './Components/PokemonTeam.css'
 import React from "react"
 import ReactDOM from "react-dom";
-import { createContext, useState, useContext } from "react"
+import { createContext, useState, useContext, useEffect } from "react"
 import Left from "./Hooks/Left"
 import Right from "./Hooks/Right"
 import PokemonTeam from './Components/PokemonTeam'
@@ -16,6 +16,7 @@ import PokemonMore from './Components/PokemonMore';
 export const LoginContext = createContext();
 
 function App() {
+	
 	
 	const [active, setActive] = useState(false);
 	

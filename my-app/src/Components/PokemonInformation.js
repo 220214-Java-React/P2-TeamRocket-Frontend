@@ -3,7 +3,7 @@ import PokemonMore from "./PokemonMore";
 import { useState, setState } from "react";
 import { Component } from "react";
 
-var pokeId=0;
+var pokeId=1;
 
  export default function PokemonInformation(){
      const [pokemon, setPokemon]= useState(' ')
@@ -24,6 +24,7 @@ var pokeId=0;
        
             return(
                 <>
+                
                 <span id ="left-box">
                     <PokemonMore parentToChild={pokemon} /> 
                 </span>
