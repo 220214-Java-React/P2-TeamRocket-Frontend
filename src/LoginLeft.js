@@ -13,7 +13,7 @@ function LoginLeft(){
 				<br />
 				Welcome to the pokedex application!
 				<br /><br />
-				Lets start by logging in or registering a new account in the right hand panel!
+				Start by logging in or registering a new account to the right!
 				</>
 				:
 				<>
