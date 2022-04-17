@@ -1,0 +1,1 @@
+import PokemonInformation from "../Components/PokemonInformation";

@@ -1,6 +1,6 @@
 #imag{
-    height: 75%;
-    width: 75%;
+    height: 60%;
+    width: 60%;
     padding-left: 10%;
    
 }
@@ -12,4 +12,10 @@
 }
 #pokemonId{
     padding-left: 30%;
+}
+#title{
+    padding-left: 20%;
+}
+#desc{
+    padding-left: 10%;
 }

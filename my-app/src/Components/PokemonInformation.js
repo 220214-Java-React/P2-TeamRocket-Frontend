@@ -1,14 +1,23 @@
 import React from "react";
-import PokemonMore from "./PokemonMore";
-import { useState, setState } from "react";
-import { Component } from "react";
+import PokemonMore  from "./PokemonMore";
+import { useState} from "react";
 
-var pokeId=1;
 
+let pokemonName= "";
  export default function PokemonInformation(){
      const [pokemon, setPokemon]= useState(' ')
+     const[pokemonInfo, setPokemonInfo]= useState(' ')
      const parentToChild = (i) => {
          setPokemon(i);
+
+         fetch(`https://pokeapi.co/api/v2/pokemon-species/${i}`)
+        .then(response => response.json())
+        .then(data => pokemonToChild(data));
+        
+        const pokemonToChild = (i) => {
+            setPokemonInfo(i)
+        }
+        
      }
         
         const pokemonArray =[];
@@ -26,7 +35,7 @@ var pokeId=1;
                 <>
                 
                 <span id ="left-box">
-                    <PokemonMore parentToChild={pokemon} /> 
+                    <PokemonMore parentToChild={pokemon} pokemonToChild ={pokemonInfo} /> 
                 </span>
                 
                 <div id= "right-box">

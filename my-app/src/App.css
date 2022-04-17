@@ -18,9 +18,9 @@
 	overflow: scroll;
 }
 
-#left-box:hover{
+/* #left-box:hover{
 	outline: 5px solid lime;
-}
+} */
 
 #right-box{
 	position: relative;
