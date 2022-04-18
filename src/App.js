@@ -28,7 +28,7 @@ function App() {
 			return (
 				<div id="login-component" >
 					<LoginContext.Provider value={[active, setActive]}>
-						
+						<NavBar />
 						<LoginLeft />
 						<LoginRight  />
 					</LoginContext.Provider>

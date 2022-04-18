@@ -10,7 +10,8 @@ function NavBar(){
 	
 	function navigateComponents(e){
 
-		if(window.myser){
+
+		if(window.myuser){
 			
 			let myNavs = document.getElementById("navbar").childNodes;
 			
@@ -26,6 +27,8 @@ function NavBar(){
 				if(window.confirm("Logout?")){
 					window.myuser = null;
 					localStorage.removeItem("myuser");
+					setActive(0);
+					window.location.reload();
 				}
 			}
 			
@@ -37,7 +40,7 @@ function NavBar(){
 	}
 	
 	return (<div id="navbar">
-				<div className="nav-button-left nav-button-active" id="nav-button-0" onClick={navigateComponents}>{active == 0 ? "Login" : window.myuser.username}</div>
+				<div className="nav-button-left nav-button-active" id="nav-button-0" onClick={navigateComponents}>{window.myuser == null ? "Login" : window.myuser.username}</div>
 				<div className="nav-button" id="nav-button-1" onClick={navigateComponents}>two</div>
 				<div className="nav-button" id="nav-button-2" onClick={navigateComponents}>three</div>
 				<div className="nav-button-right nav-button" id="nav-button-3" onClick={navigateComponents}>four</div>
