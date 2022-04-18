@@ -7,6 +7,7 @@ import NavBar from "./Component/NavBar"
 import LoginLeft from "./Component/LoginLeft"
 import LoginRight from "./Component/LoginRight"
 import CGallery from "./Component/CGallery"
+import Justin from './Component/Justin';
 
 export const LoginContext = createContext();
 
@@ -51,7 +52,7 @@ function App() {
 			return (
 				<>
 					<LoginContext.Provider value={[active, setActive]}>
-
+						<Justin />
 					</LoginContext.Provider>
 				</>
 				
