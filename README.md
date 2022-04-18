@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+1. Team Name: Team Rocket
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. Team Structure:
+	- GIT MANAGER: Jason
+	- TEAM ORGANIZER: Ishaan
 
-## Available Scripts
+3. Project Idea: Pokemon
 
-In the project directory, you can run:
+4. User Story:
 
-### `npm start`
+	- Log-In
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+		Register user
+		compare user input to database
+		locally store user credentials
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+	- Gallery View (Pokedex)
 
-### `npm test`
+		request pokemon
+		store pokemon in array
+		display all pokemon
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+	- Gallery View of All Players (Competitors)
 
-### `npm run build`
+		request each player
+		store players in array
+		display each player
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+	- Roster View (Randomly Assigned User's Team)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+		request user team
+		store user team
+		display user team pokemon
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## BONUS / STRETCH GOALS 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+	- New Pokemon Assignment Screen
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+		trade pokemon
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+		randomly assign pokemon
+		Update database
+		display user team
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+	- Verses Comparison (Card Comparison between different Player)
 
-## Learn More
+		request user team
+		request player team
+		display both teams
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+TEAM ROCKET DATABASE
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+MODELS:
 
-### Analyzing the Bundle Size
+USER:
+USERNAME text
+PASSWORD text
+POKEMON [array of int's]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+POKE-API DATABASE REQUEST
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+POKEMON ?!?
