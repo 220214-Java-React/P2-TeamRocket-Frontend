@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom";
 import { useState, createContext, useContext } from "react";
-import {LoginContext} from "./App"
+import {LoginContext} from "../App"
 
 function LoginForm(){
 	
@@ -104,6 +104,7 @@ function LoginForm(){
 							}
 							localStorage.setItem("myuser", JSON.stringify(window.myuser));
 							setActive(0);
+							window.location.reload();
 						}else{
 							alert("The credentials do not match our records.");
 						}
@@ -141,6 +142,7 @@ function LoginForm(){
 						}
 						localStorage.setItem("myuser", JSON.stringify(window.myuser));
 						setActive(0);
+						window.location.reload();
 					});
 					
 				}else{

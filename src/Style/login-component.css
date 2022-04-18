@@ -1,5 +1,5 @@
 #login-component{
-	background: url("pokedex.png") no-repeat center center fixed;
+	background: url("../../public/img/pokedex.png") no-repeat center center fixed;
 	background-size: auto 100%;
 	margin: auto;
 	height: 100%;

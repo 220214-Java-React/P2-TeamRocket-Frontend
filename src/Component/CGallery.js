@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import "./Gallery.css";
+import "../Style/Gallery.css";
 import PhotoContainer from "./PhotoContainer";
 import { BannerIMG } from "./BannerIMG";
+import NavBar from "./NavBar";
 
 class CGallery extends Component{
     constructor(){
@@ -29,6 +30,7 @@ class CGallery extends Component{
     render() {
         return (
             <section>
+                <NavBar />
                 <BannerIMG />
                 <PhotoContainer photos={this.state.photos}/>
             </section>

@@ -1,11 +1,12 @@
-import './App.css';
-import "./login-component.css";
+import './Style/App.css';
+import "./Style/login-component.css";
 import React from "react"
 import ReactDOM from "react-dom";
 import { createContext, useState, useContext } from "react";
-import NavBar from "./NavBar"
-import LoginLeft from "./LoginLeft"
-import LoginRight from "./LoginRight"
+import NavBar from "./Component/NavBar"
+import LoginLeft from "./Component/LoginLeft"
+import LoginRight from "./Component/LoginRight"
+import CGallery from "./Component/CGallery"
 
 export const LoginContext = createContext();
 
@@ -28,7 +29,7 @@ function App() {
 			return (
 				<div id="login-component" >
 					<LoginContext.Provider value={[active, setActive]}>
-						
+						<NavBar />
 						<LoginLeft />
 						<LoginRight  />
 					</LoginContext.Provider>
@@ -40,7 +41,7 @@ function App() {
 			return (
 				<>
 					<LoginContext.Provider value={[active, setActive]}>
-
+						<CGallery/>
 					</LoginContext.Provider>
 				</>
 				

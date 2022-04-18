@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom";
 import { useState, createContext, useContext } from "react";
-import {LoginContext} from "./App"
+import {LoginContext} from "../App"
 
 function LoginLeft(){
 	
