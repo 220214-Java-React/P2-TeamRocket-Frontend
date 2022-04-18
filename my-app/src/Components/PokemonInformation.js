@@ -3,16 +3,17 @@ import PokemonMore  from "./PokemonMore";
 import { useState} from "react";
 
 
-let pokemonName= "";
  export default function PokemonInformation(){
-     const [pokemon, setPokemon]= useState(' ')
-     const[pokemonInfo, setPokemonInfo]= useState(' ')
+     const [pokemon, setPokemon]= useState('')
+     const[pokemonInfo, setPokemonInfo]= useState('')
      const parentToChild = (i) => {
          setPokemon(i);
 
          fetch(`https://pokeapi.co/api/v2/pokemon-species/${i}`)
         .then(response => response.json())
         .then(data => pokemonToChild(data));
+
+        
         
         const pokemonToChild = (i) => {
             setPokemonInfo(i)
