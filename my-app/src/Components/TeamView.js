@@ -3,7 +3,7 @@ import { useState } from "react";
 import PokemonTeam from "./PokemonTeam";
 
 
-
+var pokemon = []
 function TeamView() {
   const [ pokemonState, setPokemonState] = useState('')
   const pokemonToState = () => {
@@ -11,8 +11,12 @@ function TeamView() {
 
     fetch("http://localhost:8080/team/1")
     .then((response) => response.json())
-    .then((data) => setPokemonState(data));
-    console.log(pokemonState);
+    .then((data) => dataToChild(data));
+
+    const dataToChild = (i) => {
+      console.log(i)
+
+    }
   }
 
 
