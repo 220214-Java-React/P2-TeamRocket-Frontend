@@ -10,7 +10,7 @@ function LoginRight(){
 	const [active, setActive] = useContext(LoginContext);
 	
 	return (<div className="right-box">
-				{active ? "" : <LoginForm />}
+				{active == 0 ? <LoginForm /> : ""}
 			</div>
 	);
 }

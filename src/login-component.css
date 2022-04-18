@@ -9,6 +9,50 @@
 
 }
 
+#login-name{
+	text-align: center;
+	font-size: 2em;
+}
+
+#navbar{
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 15%;
+	justify-content: center;
+	font-size: 1.5em;
+	font-weight: 700;
+	margin: 5px;
+	z-index: 1;
+	color: white;
+}
+
+#navbar:hover{
+	cursor: pointer;
+}
+
+#nav-button-0{
+	border-radius: 10px 0px 0px 10px;
+}
+
+#nav-button-3{
+	border-radius: 0px 10px 10px 0px;
+}
+
+.nav-button{
+	background-color: grey;
+	padding: 10px;
+	margin: 2px;
+	text-align: center;
+}
+
+.nav-button-active{
+	background-color: rgb(250,13,13);
+	padding: 10px;
+	margin: 2px;
+	text-align: center;
+}
+
 .left-box{
 	position: relative;
 	top: 25.3%;
@@ -30,7 +74,7 @@
 	width: 37.7%;
 }
 
-#navbar{
+#login-navbar{
 	display: flex;
 	height: 10%;
 	justify-content: center;
@@ -40,19 +84,19 @@
 	
 }
 
-.nav-buttons{
+.login-nav-buttons{
 	text-align: center;
 	vertical-align: middle;
 	line-height: center;
 	padding: 1% 2% 0 2%;
 }
 
-.nav-buttons:hover{
+.login-nav-buttons:hover{
 	color: rgb(250,13,13);
 	cursor: pointer;
 }
 
-.nav-buttons-active{
+.login-nav-buttons-active{
 	color: rgb(250,13,13);
 	text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
 }

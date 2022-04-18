@@ -8,17 +8,17 @@ function LoginLeft(){
 	const [active, setActive] = useContext(LoginContext);
 	
 	return <div className="left-box" id="login-left">
-				{active == 0 ? 
+				{window.myuser == null? 
 				<>
 				<br />
-				Welcome to the pokedex application!
+				Welcome to the pokedex application! 
 				<br /><br />
 				Start by logging in or registering a new account to the right!
 				</>
 				:
 				<>
 				<br />
-				Welcome back {window.myuser.username}!
+				Welcome back...
 				</>
 				}
 			</div>;

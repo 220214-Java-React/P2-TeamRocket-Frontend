@@ -49,8 +49,8 @@ function LoginForm(){
 	const toggleLogReg = (e) => {
 		
 		if(myButtonState.ids.indexOf(e.target.id) != myButtonState.state){
-			document.getElementById(myButtonState.ids[myButtonState.state]).classList.remove("nav-buttons-active");
-			document.getElementById(myButtonState.ids[Math.abs(myButtonState.state-1)]).classList.add("nav-buttons-active");
+			document.getElementById(myButtonState.ids[myButtonState.state]).classList.remove("login-nav-buttons-active");
+			document.getElementById(myButtonState.ids[Math.abs(myButtonState.state-1)]).classList.add("login-nav-buttons-active");
 			myButtonState.state = Math.abs(myButtonState.state-1);
 		}
 	}
@@ -102,6 +102,8 @@ function LoginForm(){
 							window.myuser = {
 								username: myUsername.value
 							}
+							localStorage.setItem("myuser", JSON.stringify(window.myuser));
+							setActive(0);
 						}else{
 							alert("The credentials do not match our records.");
 						}
@@ -138,6 +140,7 @@ function LoginForm(){
 							username: myUsername.value
 						}
 						localStorage.setItem("myuser", JSON.stringify(window.myuser));
+						setActive(0);
 					});
 					
 				}else{
@@ -150,34 +153,43 @@ function LoginForm(){
 		
 	}
 
-	//
+	//regex the input and feed it back in, also show if the username is taken
 	function valInput(e){
 		
 		var temp = document.getElementById(e.target.id).value.replace(/[^a-z0-9_]/gi, "");
 		document.getElementById(e.target.id).value = temp;
 		
 		//check if the username is taken and display message
-		if(e.target.id == "login-form-username" && myUsernames.includes(temp)){
+		let isReg = document.getElementById("register-button").classList.contains("login-nav-buttons-active");
+		if(e.target.id == "login-form-username" && myUsernames.includes(temp) && isReg){
 			document.getElementById("login-form-username-taken").style.display = "block";
 		}else{
 			document.getElementById("login-form-username-taken").style.display = "none";
 		}
 	}
-	
+
 	return 	(<>
-			<div id="navbar">
-				<div className="nav-buttons nav-buttons-active" id="login-button" onClick={toggleLogReg}>login</div>&nbsp;/&nbsp;
-				<div className="nav-buttons" id="register-button" onClick={toggleLogReg}>register</div>
-			</div>
-			<div id="login-form" ><div id="login-form-username-taken">This username is taken.</div>
-				<input type="text" id="login-form-username" size="25" placeholder="Username" onChange={valInput}></input>
-				<br /><br />
-				<input type="text" id="login-form-password" size="25" placeholder="Password" onChange={valInput}></input>
-				<br /><br />
-				<button type="button" id="login-form-button" onClick={submitLogReg}>Submit</button>
-			</div>
-			</>
-			);
+				{window.myuser == null ?
+				<>	
+					<div id="login-navbar">
+						<div className="login-nav-buttons login-nav-buttons-active" id="login-button" onClick={toggleLogReg}>login</div>&nbsp;/&nbsp;
+						<div className="login-nav-buttons" id="register-button" onClick={toggleLogReg}>register</div>
+					</div>
+					<div id="login-form" ><div id="login-form-username-taken">This username is taken.</div>
+						<input type="text" id="login-form-username" size="25" placeholder="Username" onChange={valInput}></input>
+						<br /><br />
+						<input type="text" id="login-form-password" size="25" placeholder="Password" onChange={valInput}></input>
+						<br /><br />
+						<button type="button" id="login-form-button" onClick={submitLogReg}>Submit</button>
+					</div>
+				</>
+				:
+				<div id="login-name">
+					<br />
+					...{window.myuser.username}
+				</div>
+				}
+			</>);
 }
 
 export default LoginForm;

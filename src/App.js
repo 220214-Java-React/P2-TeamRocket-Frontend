@@ -3,6 +3,7 @@ import "./login-component.css";
 import React from "react"
 import ReactDOM from "react-dom";
 import { createContext, useState, useContext } from "react";
+import NavBar from "./NavBar"
 import LoginLeft from "./LoginLeft"
 import LoginRight from "./LoginRight"
 
@@ -27,10 +28,41 @@ function App() {
 			return (
 				<div id="login-component" >
 					<LoginContext.Provider value={[active, setActive]}>
+						
 						<LoginLeft />
 						<LoginRight  />
 					</LoginContext.Provider>
 				</div>
+				
+			);
+			break;
+		case 1:
+			return (
+				<>
+					<LoginContext.Provider value={[active, setActive]}>
+
+					</LoginContext.Provider>
+				</>
+				
+			);
+			break;
+		case 2:
+			return (
+				<>
+					<LoginContext.Provider value={[active, setActive]}>
+
+					</LoginContext.Provider>
+				</>
+				
+			);
+			break;
+		case 3:
+			return (
+				<>
+					<LoginContext.Provider value={[active, setActive]}>
+
+					</LoginContext.Provider>
+				</>
 				
 			);
 			break;
