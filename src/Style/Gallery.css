@@ -1,6 +1,7 @@
 body {
     margin: 0;
     overflow-x: hidden;
+    background-color: white;
   }
   
   .banner-img {
@@ -9,7 +10,6 @@ body {
     justify-content: center;
     width: 100vw;
     height: calc(100vh - 100px);
-    margin-bottom: 50px;
     max-height: 40vh;
   }
   
@@ -27,6 +27,11 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   }
 
+  .CGC{
+    z-index: 9999;
+    background-color: white;
+  }
+
   h4 {
     text-align: center;
     font-size: 2em;
@@ -36,3 +41,6 @@ body {
     color: tomato;
   }
   
+  .gBox{
+    background-color: white;
+  }
