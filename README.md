@@ -1,3 +1,6 @@
+Backend Repository: https://github.com/220214-Java-React/P2-TeamRocket-Backend/tree/main
+
+
 1. Team Name: Team Rocket
 
 2. Team Structure:
