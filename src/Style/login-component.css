@@ -1,0 +1,115 @@
+#login-component{
+	background: url("../../public/img/pokedex.png") no-repeat center center fixed;
+	background-size: auto 100%;
+	margin: auto;
+	height: 100%;
+	display: flex;
+	aspect-ratio: 8/6;
+	border: 2px solid black;
+
+}
+
+#login-name{
+	text-align: center;
+	font-size: 2em;
+}
+
+#navbar{
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 15%;
+	justify-content: center;
+	font-size: 1.5em;
+	font-weight: 700;
+	margin: 5px;
+	z-index: 1;
+	color: white;
+}
+
+#navbar:hover{
+	cursor: pointer;
+}
+
+#nav-button-0{
+	border-radius: 10px 0px 0px 10px;
+}
+
+#nav-button-3{
+	border-radius: 0px 10px 10px 0px;
+}
+
+.nav-button{
+	background-color: grey;
+	padding: 10px;
+	margin: 2px;
+	text-align: center;
+}
+
+.nav-button-active{
+	background-color: rgb(250,13,13);
+	padding: 10px;
+	margin: 2px;
+	text-align: center;
+}
+
+.left-box{
+	position: relative;
+	top: 25.3%;
+	left: 3.6%;
+	height: 56.5%;
+	width: 41.45%;
+}
+
+#login-left{
+	text-align: center;
+	font-size: 2em;
+}
+
+.right-box{
+	position: relative;
+	top: 26%;
+	left: 16.5%;
+	height: 62.75%;
+	width: 37.7%;
+}
+
+#login-navbar{
+	display: flex;
+	height: 10%;
+	justify-content: center;
+	font-size: 1.5em;
+	font-weight: 700;
+	margin: 5px;
+	
+}
+
+.login-nav-buttons{
+	text-align: center;
+	vertical-align: middle;
+	line-height: center;
+	padding: 1% 2% 0 2%;
+}
+
+.login-nav-buttons:hover{
+	color: rgb(250,13,13);
+	cursor: pointer;
+}
+
+.login-nav-buttons-active{
+	color: rgb(250,13,13);
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+}
+
+#login-form-username-taken{
+	display: none;
+	font-size: 1em;
+	color: rgb(250,13,13);
+}
+
+#login-form{
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+}
