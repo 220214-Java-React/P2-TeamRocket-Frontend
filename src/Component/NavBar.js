@@ -41,9 +41,9 @@ function NavBar(){
 	
 	return (<div id="navbar">
 				<div className="nav-button-left nav-button-active" id="nav-button-0" onClick={navigateComponents}>{window.myuser == null ? "Login" : window.myuser.username}</div>
-				<div className="nav-button" id="nav-button-1" onClick={navigateComponents}>two</div>
-				<div className="nav-button" id="nav-button-2" onClick={navigateComponents}>three</div>
-				<div className="nav-button-right nav-button" id="nav-button-3" onClick={navigateComponents}>four</div>
+				<div className="nav-button" id="nav-button-1" onClick={navigateComponents}>Competitors</div>
+				<div className="nav-button" id="nav-button-2" onClick={navigateComponents}>Pokedex</div>
+				<div className="nav-button-right nav-button" id="nav-button-3" onClick={navigateComponents}>Team View</div>
 			</div>
 	);
 }
