@@ -1,9 +1,13 @@
-Backend Repository: https://github.com/220214-Java-React/P2-TeamRocket-Backend/tree/main
+## Backend Repository: 
+#### https://github.com/220214-Java-React/P2-TeamRocket-Backend/tree/main
 
+
+
+## Project Overview:
 
 1. Team Name: Team Rocket
 
-2. Team Structure:
+2. *Initial* Team Structure:
 	- GIT MANAGER: Jason
 	- TEAM ORGANIZER: Ishaan
 
